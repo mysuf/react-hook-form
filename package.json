@@ -41,6 +41,7 @@
     "test:watch": "pnpm test -- --onlyChanged --watch",
     "test:web": "TEST_ENV=web pnpm test",
     "test:type": "tsd src/__typetest__",
+    "test:one": "pnpm test -- src/__tests__/useForm/issue10964.test.tsx",
     "e2e": "cypress run",
     "e2e:watch": "cypress open",
     "api-extractor": "api-extractor run --local",
