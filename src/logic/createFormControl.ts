@@ -748,7 +748,7 @@ export function createFormControl<
         )[name];
 
         isFieldValueUpdated =
-          isNaN(fieldValue) ||
+          Number.isNaN(fieldValue) ||
           fieldValue === get(_formValues, name, fieldValue);
 
         if (isFieldValueUpdated) {
@@ -1234,8 +1234,10 @@ export function createFormControl<
         ? _formState.touchedFields
         : {},
       errors: keepStateOptions.keepErrors ? _formState.errors : {},
+      isSubmitSuccessful: keepStateOptions.keepIsSubmitSuccessful
+        ? _formState.isSubmitSuccessful
+        : false,
       isSubmitting: false,
-      isSubmitSuccessful: false,
     });
   };
 
